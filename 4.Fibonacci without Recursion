@@ -1,26 +1,22 @@
-#include<stdio.h>    
-#include<stdlib.h>
-int main(){
-	int a=0,b=1,temp,n,i;
-	printf("Enter the number: ");
-	scanf("%d",&n);
-	printf("Fibannaci series : ");
-	if(n==1){
-		printf("0");
-	}
-	else{
-		if(n==2){
-			printf("1");
-		}
-	else{
-		printf("0 1");
-		for(i=3;i<=n;i++){
-		temp = a+b;
-		printf(" %d",temp);
-		a = b;
-		b = temp;
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int n, i;
+    unsigned long long factorial = 1;
+ 
+    printf("Enter a number to find factorial: ");
+    scanf("%d",&n);
+    if (n < 0)
+        printf("Error! Please enter any positive integer number");
+ 
+    else
+    {
+        for(i=1; i<=n; ++i)
+        {
+            factorial *= i;
         }
-	}
+        printf("Factorial of Number %d = %llu", n, factorial);
     }
-	
+    getch();
 }
